@@ -2,9 +2,9 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
-export default defineConfig(({command}) => {
+export default defineConfig(({mode}) => {
   return {
     plugins: [react()],
-    base: command === 'serve' ? '/': '/testimonial-card/'
+    base: mode === 'production' ? '/testimonial-card/': '/'
   }
 })
